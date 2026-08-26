@@ -46,10 +46,13 @@ jobs:
           text = path.read_text()
           if "\\n" not in text:
               raise SystemExit("expected escaped metadata line breaks")
-          path.write_text(text.replace("\\n", chr(10)))
+          updated = text.replace("\\n", chr(10))
+          if "\\n" in updated:
+              raise SystemExit("metadata line breaks remain escaped")
+          if updated.count('meta property="og:image:alt"') != 1:
+              raise SystemExit("logo alt metadata missing or duplicated")
+          path.write_text(updated)
           PY
-          test "$(grep -F -o '\\n' index.html | wc -l | tr -d ' ')" = "0"
-          test "$(grep -F -c 'meta property=\"og:image:alt\"' index.html)" = "1"
 
       - name: Publish and clean staging files
         run: |
