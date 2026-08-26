@@ -21,6 +21,7 @@ jobs:
         run: |
           git show "$BASE_COMMIT:index.html" > index.html
           python3 - <<'PY'
+          import re
           from pathlib import Path
 
           path = Path("index.html")
@@ -28,40 +29,29 @@ jobs:
 
           old = '    <meta property="og:type" content="website" />'
           new = '''    <meta property="og:image" content="https://akang123.github.io/crypto-ai-trivia/assets/merkle-icon.png" />
-              <meta property="og:image:alt" content="Merkle Research logo" />
-              <meta property="og:type" content="website" />
-              <meta name="twitter:card" content="summary" />
-              <meta name="twitter:image" content="https://akang123.github.io/crypto-ai-trivia/assets/merkle-icon.png" />
-              <link rel="icon" type="image/png" href="assets/merkle-icon.png" />
-              <link rel="apple-touch-icon" href="assets/merkle-icon.png" />'''
+    <meta property="og:image:alt" content="Merkle Research logo" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="https://akang123.github.io/crypto-ai-trivia/assets/merkle-icon.png" />
+    <link rel="icon" type="image/png" href="assets/merkle-icon.png" />
+    <link rel="apple-touch-icon" href="assets/merkle-icon.png" />'''
           if html.count(old) != 1:
               raise SystemExit("metadata anchor not found exactly once")
           html = html.replace(old, new, 1)
 
-          old = '''      .brand-mark {
-                display: grid;
-                width: 36px;
-                height: 36px;
-                place-items: center;
-                border: 1px solid var(--line-strong);
-                background: var(--white);
-                color: var(--black);
-                font-size: 0.92rem;
-                font-weight: 950;
-                letter-spacing: -0.12em;
-              }'''
-          new = '''      .brand-mark {
-                display: block;
-                width: 40px;
-                height: 40px;
-                flex: 0 0 auto;
-                border: 1px solid var(--line-strong);
-                background: var(--black);
-                object-fit: cover;
-              }'''
-          if html.count(old) != 1:
+          pattern = r'(?s)      \.brand-mark \{.*?\n      \}'
+          replacement = '''      .brand-mark {
+        display: block;
+        width: 40px;
+        height: 40px;
+        flex: 0 0 auto;
+        border: 1px solid var(--line-strong);
+        background: var(--black);
+        object-fit: cover;
+      }'''
+          html, count = re.subn(pattern, replacement, html, count=1)
+          if count != 1:
               raise SystemExit("brand CSS anchor not found exactly once")
-          html = html.replace(old, new, 1)
 
           old = '          <span class="brand-mark" aria-hidden="true">M</span>'
           new = '          <img class="brand-mark" src="assets/merkle-icon.png" alt="Merkle Research logo" width="40" height="40" decoding="async" />'
