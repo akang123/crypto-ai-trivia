@@ -2,6 +2,10 @@
 
 Public, no-login trivia game for the Merkle Research newsletter launch.
 
+Live game: https://akang123.github.io/crypto-ai-trivia/
+
+Repository: https://github.com/akang123/crypto-ai-trivia
+
 ## Files
 
 - `index.html` — the full responsive game and interface.
@@ -35,4 +39,4 @@ Then open `http://127.0.0.1:4173`.
 
 ## Hosting
 
-The public version is intended for GitHub Pages. Push the folder contents to the repository's `main` branch, then set Pages to deploy from the root of `main`.
+GitHub Pages is configured from the root of the `main` branch. Push the folder contents to update the public game.
