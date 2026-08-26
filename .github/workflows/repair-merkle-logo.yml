@@ -21,6 +21,7 @@ jobs:
             cat .repair/chunks/part-aa .repair/chunks/part-ab .repair/chunks/part-ac
             cat .repair/fixes/ad-aa .repair/fixes/ad-ab
             cat .repair/fixes-v3/ad-ac-aa .repair/fixes-v3/ad-ac-ab
+            cat .repair/fixes-v5/ad-ac-ab-aa .repair/fixes-v5/ad-ac-ab-ab
             cat .repair/chunks/part-ae .repair/chunks/part-af .repair/chunks/part-ag .repair/chunks/part-ah
             cat .repair/fixes/ai-aa .repair/fixes/ai-ab .repair/fixes/ai-ac
             cat .repair/chunks/part-aj .repair/chunks/part-ak .repair/chunks/part-al .repair/chunks/part-am
