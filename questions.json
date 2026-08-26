@@ -1,0 +1,92 @@
+[
+  {
+    "id": "agent-wallet",
+    "category": "The System",
+    "kicker": "Signal check",
+    "question": "Why would an AI agent need a wallet?",
+    "options": ["To store model weights", "To hold funds and authorize transactions", "To make its answers more creative", "To replace a data center"],
+    "answer": 1,
+    "explanation": "A wallet gives software a way to hold value and sign transactions without a human clicking every button."
+  },
+  {
+    "id": "stable-value",
+    "category": "The Money",
+    "kicker": "Money check",
+    "question": "What is the defining design goal of a stablecoin?",
+    "options": ["A fixed supply forever", "A stable value relative to a reference asset", "A faster internet connection", "A private social network"],
+    "answer": 1,
+    "explanation": "Stablecoins are designed to track a reference value, often a fiat currency, so they can be used as a predictable unit of account."
+  },
+  {
+    "id": "smart-contract",
+    "category": "The System",
+    "kicker": "System check",
+    "question": "What is a smart contract best described as?",
+    "options": ["A legal PDF signed by a lawyer", "A program that runs according to rules on a blockchain", "A hardware wallet with a touchscreen", "A chatbot trained on markets"],
+    "answer": 1,
+    "explanation": "A smart contract is software deployed to a blockchain that executes predefined logic when its conditions are met."
+  },
+  {
+    "id": "spend-limits",
+    "category": "The Tension",
+    "kicker": "Safety check",
+    "question": "Why do spending limits matter for autonomous agents?",
+    "options": ["They make blockchains private", "They bound the damage from a bad decision or compromised agent", "They guarantee a profit", "They remove the need for identity"],
+    "answer": 1,
+    "explanation": "Limits turn an open-ended software action into a bounded permission, which is essential when the actor can move value on its own."
+  },
+  {
+    "id": "settlement",
+    "category": "The Money",
+    "kicker": "Money check",
+    "question": "In payments, what does settlement mean?",
+    "options": ["Designing a new logo", "The final transfer and recording of value between parties", "Writing a market prediction", "Training an AI model"],
+    "answer": 1,
+    "explanation": "Settlement is the point at which the payment is finalized and the ledger reflects who now owns the value."
+  },
+  {
+    "id": "tradfi",
+    "category": "The Players",
+    "kicker": "Players check",
+    "question": "What does “TradFi” refer to?",
+    "options": ["Traditional finance", "Trading a final answer", "Transferable file formats", "A type of AI benchmark"],
+    "answer": 0,
+    "explanation": "TradFi is shorthand for the traditional financial system: banks, brokerages, payment networks, and related institutions."
+  },
+  {
+    "id": "internet-payments",
+    "category": "The Money",
+    "kicker": "Money check",
+    "question": "Why might stablecoins fit internet-native payments?",
+    "options": ["They can move value programmatically and around the clock", "They only work inside one bank branch", "They eliminate every compliance requirement", "They can only be spent by humans"],
+    "answer": 0,
+    "explanation": "Programmable, always-on settlement is a useful property when software needs to pay software across time zones and platforms."
+  },
+  {
+    "id": "permissions-layer",
+    "category": "The System",
+    "kicker": "System check",
+    "question": "Which layer answers the question “what is this agent allowed to do?”",
+    "options": ["Permissions and spending controls", "The screen brightness layer", "The headline layer", "The weather layer"],
+    "answer": 0,
+    "explanation": "Identity says who or what is acting; permissions define the actions and limits that actor is allowed to use."
+  },
+  {
+    "id": "economic-actor",
+    "category": "The Signal",
+    "kicker": "Signal check",
+    "question": "What is the key shift behind the idea of agentic finance?",
+    "options": ["Software becomes an economic actor that can initiate transactions", "Humans stop using banks entirely", "Blockchains stop needing rules", "AI replaces every financial institution"],
+    "answer": 0,
+    "explanation": "The interesting shift is not that humans disappear. It is that software can begin acting as a buyer, seller, or operator inside an economic system."
+  },
+  {
+    "id": "agent-stack",
+    "category": "The System",
+    "kicker": "System check",
+    "question": "Which sequence best matches a simple agentic finance stack?",
+    "options": ["Agent → wallet → permissions → payment rail → stablecoin", "Stablecoin → logo → chatbot → spreadsheet → bank", "Phone → password → camera → model → browser", "Exchange → meme → game → email → cloud"],
+    "answer": 0,
+    "explanation": "The stack connects intelligence to identity, controlled authority, a payment protocol, and a stable unit of value."
+  }
+]
