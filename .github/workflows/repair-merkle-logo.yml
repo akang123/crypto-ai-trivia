@@ -35,7 +35,6 @@ jobs:
             cat .repair/fixes/az-ab .repair/fixes/az-ac
             cat .repair/chunks/part-ba
             cat .repair/fixes/bb-aa .repair/fixes-v2/bb-ab-aa .repair/fixes-v3/bb-ab-ab
-            printf '='
           } | tr -d '\r\n' | base64 --decode > assets/merkle-icon.png
           test "$(sha256sum assets/merkle-icon.png | cut -d' ' -f1)" = "70a96011f489c15f216379cda4eebc4631693587823d935dd2725183fc54ea4d"
 
