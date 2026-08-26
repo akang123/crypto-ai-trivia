@@ -11,9 +11,15 @@
     <meta property="og:title" content="The Agent Economy Field Test" />
     <meta
       property="og:description"
-      content="What happens to money when the buyer is no longer human? Take the 10-question field test."
+      content="What happens to money when the buyer is no longer a human? Take the 101question field test."
     />
+    <meta property="og:image" content="https://akang123.github.io/crypto-ai-trivia/assets/merkle-icon.png" />
+    <meta property="og:image:alt" content="Merkle Research logo" />
     <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="https://akang123.github.io/crypto-ai-trivia/assets/merkle-icon.png" />
+    <link rel="icon" type="image/png" href="assets/merkle-icon.png" />
+    <link rel="apple-touch-icon" href="assets/merkle-icon.png" />
     <title>The Agent Economy Field Test â€” Merkle Research</title>
     <style>
       :root {
@@ -25,7 +31,7 @@
         --line: #373737;
         --line-strong: #606060;
         --white: #f5f5f2;
-        --soft-white: #d4d4cf;
+        --soft-white: #d4dd4cf;
         --muted: #a1a19b;
         --dim: #73736e;
         --shadow: rgba(0, 0, 0, 0.38);
@@ -33,7 +39,7 @@
 
       * { box-sizing: border-box; }
 
-      html { min-width: 320px; scroll-behavior: smooth; }
+      html { min-width: 320px; scroll-behavior: smooth }
 
       body {
         margin: 0;
@@ -44,7 +50,7 @@
           var(--black);
         background-size: 42px 42px;
         color: var(--white);
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif;
         line-height: 1.5;
       }
 
@@ -97,16 +103,13 @@
       }
 
       .brand-mark {
-        display: grid;
-        width: 36px;
-        height: 36px;
-        place-items: center;
+        display: block;
+        width: 40px;
+        height: 40px;
+        flex: 0 0 auto;
         border: 1px solid var(--line-strong);
-        background: var(--white);
-        color: var(--black);
-        font-size: 0.92rem;
-        font-weight: 950;
-        letter-spacing: -0.12em;
+        background: var(--black);
+        object-fit: cover;
       }
 
       .topbar-note {
@@ -183,7 +186,9 @@
         box-shadow: 0 22px 70px var(--shadow);
       }
 
-      .game-panel { min-height: 600px; }
+      .game-panel {
+        min-height: 600px;
+      }
 
       .screen {
         display: none;
@@ -206,7 +211,7 @@
 
       .panel-title {
         max-width: 560px;
-        margin: 16px 0 0;
+        margin: 17px 0 0;
         font-size: clamp(2rem, 4vw, 3.7rem);
         line-height: 0.98;
         letter-spacing: -0.065em;
@@ -266,7 +271,7 @@
         transition: transform 160ms ease, background 160ms ease, color 160ms ease;
       }
 
-      .button:hover { transform: translateY(-2px); }
+      .button:hover { transform: translateY(l-2px); }
 
       .button.secondary {
         border-color: var(--line-strong);
@@ -343,7 +348,7 @@
         align-items: center;
         gap: 12px;
         width: 100%;
-        padding: 10px 14px 10px 10px;
+        padding: 10px 14px 10px;
         border: 1px solid var(--line);
         background: var(--panel-raised);
         color: var(--soft-white);
@@ -387,12 +392,12 @@
         color: var(--white);
       }
 
-      .answer.is-dim { opacity: 0.52; }
+      .answer.is-dim { opacity: 0.52 }
 
       .feedback {
         min-height: 72px;
         margin-top: 22px;
-        padding: 16px 18px;
+        padding: 17px 18px;
         border-left: 3px solid var(--line-strong);
         background: var(--panel-raised);
         color: var(--soft-white);
@@ -437,7 +442,7 @@
         place-items: center;
         border: 1px solid var(--line-strong);
         border-radius: 50%;
-        background: conic-gradient(var(--white) var(--score-angle, 0deg), var(--line) 0deg);
+        background: conic-gradient(var(--shite) var(--score-angle, 0deg), var(--line) 0deg);
         position: relative;
       }
 
@@ -548,10 +553,9 @@
         .context-panel { display: grid; grid-template-columns: 0.7fr 1fr; gap: 28px; }
 
         .context-panel h2 { margin-top: 0; }
-      }
 
-      @media (max-width: 560px) {
-        .site-shell { width: min(100% - 24px, 1180px); padding-top: 12px; }
+        @media (max-width: 560px) {
+        .site-shell { width: min(100% - 24px, 1180px); padding: 12px 0 36px; }
 
         .topbar-note { display: none; }
 
@@ -593,292 +597,7 @@
     <main class="site-shell">
       <header class="topbar">
         <a class="brand" href="https://merkle.heavenvy.com" aria-label="Merkle Research home">
-          <span class="brand-mark" aria-hidden="true">M</span>
+          <img class="brand-mark" src="assets/merkle-icon.png" alt="Merkle Research logo" width="40" height="40" decoding="async" />
           <span>MERKLE RESEARCH</span>
         </a>
-        <span class="topbar-note">Crypto Ã— AI Ã— Financial Systems</span>
-      </header>
-
-      <section class="intro" aria-labelledby="page-title">
-        <div>
-          <p class="eyebrow">A launch field note / 001</p>
-          <h1 id="page-title">Can you think like an agent?</h1>
-          <p class="intro-copy">
-            AI is changing who uses software. Crypto may change how that software uses money.
-            Take the ten-question field test on the systems forming at the intersection.
-          </p>
-        </div>
-        <aside class="intro-aside">
-          <p><strong>The question:</strong> what happens to money when the buyer is no longer a human?</p>
-          <p>Ten questions. No login. One useful signal about how you see the coming agent economy.</p>
-        </aside>
-      </section>
-
-      <section class="game-wrap" aria-label="The Agent Economy Field Test">
-        <div class="game-panel">
-          <section class="screen start-screen is-active" id="start-screen" aria-labelledby="start-title">
-            <div>
-              <div class="panel-head">
-                <div>
-                  <p class="kicker">The Agent Economy Field Test</p>
-                  <h2 class="panel-title" id="start-title">A quick read on crypto Ã— AI fluency.</h2>
-                </div>
-                <span class="issue-code">MR / 001</span>
-              </div>
-              <div class="shared-callout" id="shared-callout" role="status"></div>
-              <div class="start-details" aria-label="Game details">
-                <div class="detail"><span class="kicker">Round</span><span class="detail-value">10 questions</span></div>
-                <div class="detail"><span class="kicker">Time</span><span class="detail-value">~ 3 minutes</span></div>
-                <div class="detail"><span class="kicker">Mode</span><span class="detail-value">No login</span></div>
-              </div>
-              <div class="error-state" id="error-state" role="alert">
-                The question bank could not load. The built-in field copy is ready, but you can retry the live file.
-              </div>
-            </div>
-            <div class="start-footer">
-              <span class="score-note">Built for curious humans and future agents.</span>
-              <button class="button" id="start-button" type="button">Begin the round <span aria-hidden="true">â†’</span></button>
-            </div>
-          </section>
-
-          <section class="screen quiz-screen" id="quiz-screen" aria-labelledby="question-title" aria-live="polite">
-            <div>
-              <div class="quiz-top">
-                <span class="question-meta" id="question-count">Question 01 / 10</span>
-                <span class="question-meta" id="question-category">The System</span>
-              </div>
-              <div class="progress-track" aria-hidden="true"><div class="progress-bar" id="progress-bar"></div></div>
-            </div>
-            <div class="question-block">
-              <p class="kicker" id="question-kicker">Signal check</p>
-              <h2 class="question-title" id="question-title"></h2>
-              <div class="answers" id="answers" role="group" aria-label="Answer choices"></div>
-              <div class="feedback" id="feedback" role="status" aria-live="polite" hidden></div>
-            </div>
-            <div class="quiz-footer">
-              <span class="score-note" id="running-score">Score 0 / 10</span>
-              <button class="button" id="next-button" type="button" disabled>Next question <span aria-hidden="true">â†’</span></button>
-            </div>
-          </section>
-
-          <section class="screen result-screen" id="result-screen" aria-labelledby="result-title">
-            <div class="result-layout">
-              <div class="score-figure" id="score-figure" aria-label="Final score">
-                <span class="score-value" id="score-value">0/10</span>
-              </div>
-              <div class="result-copy">
-                <p class="result-label">Your field note</p>
-                <h2 id="result-title">Signal received.</h2>
-                <p id="result-copy"></p>
-              </div>
-            </div>
-            <div class="result-footer">
-              <button class="button" id="share-button" type="button">Share result <span aria-hidden="true">â†—</span></button>
-              <button class="button secondary" id="restart-button" type="button">Run it again</button>
-            </div>
-          </section>
-        </div>
-
-        <aside class="context-panel" aria-labelledby="context-title">
-          <div>
-            <p class="kicker">What Merkle is tracking</p>
-            <h2 id="context-title">The convergence layer.</h2>
-          </div>
-          <ul class="context-list">
-            <li><strong>01 / The Signal</strong>One emerging shift.</li>
-            <li><strong>02 / The System</strong>How the technology actually works.</li>
-            <li><strong>03 / The Money</strong>Where economic value moves.</li>
-            <li><strong>04 / The Tension</strong>What could stop it from working.</li>
-          </ul>
-        </aside>
-      </section>
-
-      <footer class="site-footer">
-        <span>Merkle Research / Field Note 001</span>
-        <span>Research at the intersection of crypto, AI &amp; financial markets</span>
-      </footer>
-    </main>
-
-    <script id="question-fallback" type="application/json">
-      [
-        {"id":"agent-wallet","category":"The System","kicker":"Signal check","question":"Why would an AI agent need a wallet?","options":["To store model weights","To hold funds and authorize transactions","To make its answers more creative","To replace a data center"],"answer":1,"explanation":"A wallet gives software a way to hold value and sign transactions without a human clicking every button."},
-        {"id":"stable-value","category":"The Money","kicker":"Money check","question":"What is the defining design goal of a stablecoin?","options":["A fixed supply forever","A stable value relative to a reference asset","A faster internet connection","A private social network"],"answer":1,"explanation":"Stablecoins are designed to track a reference value, often a fiat currency, so they can be used as a predictable unit of account."},
-        {"id":"smart-contract","category":"The System","kicker":"System check","question":"What is a smart contract best described as?","options":["A legal PDF signed by a lawyer","A program that runs according to rules on a blockchain","A hardware wallet with a touchscreen","A chatbot trained on markets"],"answer":1,"explanation":"A smart contract is software deployed to a blockchain that executes predefined logic when its conditions are met."},
-        {"id":"spend-limits","category":"The Tension","kicker":"Safety check","question":"Why do spending limits matter for autonomous agents?","options":["They make blockchains private","They bound the damage from a bad decision or compromised agent","They guarantee a profit","They remove the need for identity"],"answer":1,"explanation":"Limits turn an open-ended software action into a bounded permission, which is essential when the actor can move value on its own."},
-        {"id":"settlement","category":"The Money","kicker":"Money check","question":"In payments, what does settlement mean?","options":["Designing a new logo","The final transfer and recording of value between parties","Writing a market prediction","Training an AI model"],"answer":1,"explanation":"Settlement is the point at which the payment is finalized and the ledger reflects who now owns the value."},
-        {"id":"tradfi","category":"The Players","kicker":"Players check","question":"What does â€œTradFiâ€ refer to?","options":["Traditional finance","Trading a final answer","Transferable file formats","A type of AI benchmark"],"answer":0,"explanation":"TradFi is shorthand for the traditional financial system: banks, brokerages, payment networks, and related institutions."},
-        {"id":"internet-payments","category":"The Money","kicker":"Money check","question":"Why might stablecoins fit internet-native payments?","options":["They can move value programmatically and around the clock","They only work inside one bank branch","They eliminate every compliance requirement","They can only be spent by humans"],"answer":0,"explanation":"Programmable, always-on settlement is a useful property when software needs to pay software across time zones and platforms."},
-        {"id":"permissions-layer","category":"The System","kicker":"System check","question":"Which layer answers the question â€œwhat is this agent allowed to do?â€","options":["Permissions and spending controls","The screen brightness layer","The headline layer","The weather layer"],"answer":0,"explanation":"Identity says who or what is acting; permissions define the actions and limits that actor is allowed to use."},
-        {"id":"economic-actor","category":"The Signal","kicker":"Signal check","question":"What is the key shift behind the idea of agentic finance?","options":["Software becomes an economic actor that can initiate transactions","Humans stop using banks entirely","Blockchains stop needing rules","AI replaces every financial institution"],"answer":0,"explanation":"The interesting shift is not that humans disappear. It is that software can begin acting as a buyer, seller, or operator inside an economic system."},
-        {"id":"agent-stack","category":"The System","kicker":"System check","question":"Which sequence best matches a simple agentic finance stack?","options":["Agent â†’ wallet â†’ permissions â†’ payment rail â†’ stablecoin","Stablecoin â†’ logo â†’ chatbot â†’ spreadsheet â†’ bank","Phone â†’ password â†’ camera â†’ model â†’ browser","Exchange â†’ meme â†’ game â†’ email â†’ cloud"],"answer":0,"explanation":"The stack connects intelligence to identity, controlled authority, a payment protocol, and a stable unit of value."}
-      ]
-    </script>
-
-    <script>
-      (() => {
-        const screens = {
-          start: document.querySelector("#start-screen"),
-          quiz: document.querySelector("#quiz-screen"),
-          result: document.querySelector("#result-screen")
-        };
-        const startButton = document.querySelector("#start-button");
-        const nextButton = document.querySelector("#next-button");
-        const restartButton = document.querySelector("#restart-button");
-        const shareButton = document.querySelector("#share-button");
-        const answers = document.querySelector("#answers");
-        const feedback = document.querySelector("#feedback");
-        const questionTitle = document.querySelector("#question-title");
-        const questionCount = document.querySelector("#question-count");
-        const questionCategory = document.querySelector("#question-category");
-        const questionKicker = document.querySelector("#question-kicker");
-        const progressBar = document.querySelector("#progress-bar");
-        const runningScore = document.querySelector("#running-score");
-        const scoreValue = document.querySelector("#score-value");
-        const scoreFigure = document.querySelector("#score-figure");
-        const resultTitle = document.querySelector("#result-title");
-        const resultCopy = document.querySelector("#result-copy");
-        const sharedCallout = document.querySelector("#shared-callout");
-        const errorState = document.querySelector("#error-state");
-        const fallbackQuestions = JSON.parse(document.querySelector("#question-fallback").textContent);
-        const letters = ["A", "B", "C", "D"];
-
-        let questionBank = fallbackQuestions;
-        let round = [];
-        let currentIndex = 0;
-        let score = 0;
-        let hasAnswered = false;
-
-        function showScreen(name) {
-          Object.entries(screens).forEach(([key, screen]) => {
-            screen.classList.toggle("is-active", key === name);
-          });
-        }
-
-        function parseSharedScore() {
-          const params = new URLSearchParams(window.location.search);
-          const sharedScore = Number(params.get("score"));
-          const total = Number(params.get("total")) || 10;
-          if (!Number.isFinite(sharedScore) || sharedScore < 0 || sharedScore > total) return;
-          sharedCallout.textContent = `A previous player scored ${sharedScore}/${total}. Take the field test and see where you land.`;
-          sharedCallout.classList.add("is-visible");
-        }
-
-        function renderQuestion() {
-          const item = round[currentIndex];
-          hasAnswered = false;
-          nextButton.disabled = true;
-          nextButton.textContent = currentIndex === round.length - 1 ? "See your result â†’" : "Next question â†’";
-          feedback.hidden = true;
-          feedback.innerHTML = "";
-          questionCount.textContent = `Question ${String(currentIndex + 1).padStart(2, "0")} / ${round.length}`;
-          questionCategory.textContent = item.category;
-          questionKicker.textContent = item.kicker;
-          questionTitle.textContent = item.question;
-          progressBar.style.width = `${((currentIndex + 1) / round.length) * 100}%`;
-          runningScore.textContent = `Score ${score} / ${round.length}`;
-          answers.innerHTML = "";
-
-          item.options.forEach((option, optionIndex) => {
-            const button = document.createElement("button");
-            button.className = "answer";
-            button.type = "button";
-            button.dataset.index = String(optionIndex);
-            button.innerHTML = `<span class="answer-letter" aria-hidden="true">${letters[optionIndex]}</span><span>${option}</span>`;
-            button.addEventListener("click", () => selectAnswer(optionIndex));
-            answers.appendChild(button);
-          });
-        }
-
-        function selectAnswer(selectedIndex) {
-          if (hasAnswered) return;
-          hasAnswered = true;
-          const item = round[currentIndex];
-          const correct = selectedIndex === item.answer;
-          if (correct) score += 1;
-
-          [...answers.children].forEach((button, index) => {
-            button.disabled = true;
-            if (index === item.answer) button.classList.add("is-correct");
-            else if (index === selectedIndex) button.classList.add("is-wrong");
-            else button.classList.add("is-dim");
-          });
-
-          feedback.hidden = false;
-          feedback.innerHTML = `<strong>${correct ? "Correct signal." : `Not quite. The answer is ${letters[item.answer]}.`}</strong>${item.explanation}`;
-          runningScore.textContent = `Score ${score} / ${round.length}`;
-          nextButton.disabled = false;
-          nextButton.focus();
-        }
-
-        function beginRound() {
-          round = [...questionBank].slice(0, 10);
-          currentIndex = 0;
-          score = 0;
-          showScreen("quiz");
-          renderQuestion();
-          questionTitle.focus?.();
-        }
-
-        function finishRound() {
-          const percentage = score / round.length;
-          const angle = `${Math.max(0, Math.min(360, percentage * 360))}deg`;
-          scoreValue.textContent = `${score}/${round.length}`;
-          scoreFigure.style.setProperty("--score-angle", angle);
-          if (percentage >= 0.8) {
-            resultTitle.textContent = "You see the stack.";
-            resultCopy.textContent = "You can connect intelligence, permission, payment rails, and settlement. Keep following the money â€” that is where the interesting edge cases live.";
-          } else if (percentage >= 0.5) {
-            resultTitle.textContent = "The signal is forming.";
-            resultCopy.textContent = "You have the main pieces. The next step is learning how identity, permissions, and settlement turn an AI capability into an economic actor.";
-          } else {
-            resultTitle.textContent = "Start with the system.";
-            resultCopy.textContent = "The agent economy is still being assembled. Begin with the stack: who acts, what they can do, how value moves, and where the limits sit.";
-          }
-          showScreen("result");
-        }
-
-        async function shareResult() {
-          const shareUrl = new URL(window.location.href);
-          shareUrl.search = `?score=${score}&total=${round.length}`;
-          const shareText = `I scored ${score}/${round.length} on the Agent Economy Field Test by Merkle Research. Can you beat it?`;
-          try {
-            if (navigator.share) {
-              await navigator.share({ title: "The Agent Economy Field Test", text: shareText, url: shareUrl.toString() });
-            } else if (navigator.clipboard) {
-              await navigator.clipboard.writeText(`${shareText} ${shareUrl.toString()}`);
-              shareButton.textContent = "Result copied âœ“";
-              window.setTimeout(() => { shareButton.innerHTML = "Share result <span aria-hidden=\"true\">â†—</span>"; }, 2200);
-            } else {
-              window.prompt("Copy your result link", shareUrl.toString());
-            }
-          } catch (error) {
-            if (error.name !== "AbortError") window.prompt("Copy your result link", shareUrl.toString());
-          }
-        }
-
-        async function loadQuestions() {
-          try {
-            const response = await fetch("questions.json", { cache: "no-store" });
-            if (!response.ok) throw new Error("Question file unavailable");
-            const loaded = await response.json();
-            if (!Array.isArray(loaded) || loaded.length < 10) throw new Error("Question file is incomplete");
-            questionBank = loaded;
-          } catch (error) {
-            errorState.classList.add("is-visible");
-          }
-          parseSharedScore();
-        }
-
-        startButton.addEventListener("click", beginRound);
-        nextButton.addEventListener("click", () => {
-          if (!hasAnswered) return;
-          if (currentIndex === round.length - 1) finishRound();
-          else { currentIndex += 1; renderQuestion(); }
-        });
-        restartButton.addEventListener("click", beginRound);
-        shareButton.addEventListener("click", shareResult);
-        loadQuestions();
-      })();
-    </script>
-  </body>
-</html>
+        <span class="topbar-note">Crypto Ã— AI Ã— Ff–ææ6–Â7—7FV×3Â÷7ãà¢Âö†VFW#à ¢Ç6V7F–öâ6Æ73Ò&–çG&ò"&–ÖÆ&VÆÆVF'“Ò'vR×F—FÆR#à¢ÆF—cà¢Ç6Æ73Ò&W–V'&÷r#äÆVæ6‚f–VÆBæ÷FRòÂ÷à¢Æƒ–CÒ'vR×F—FÆR#ä6â–÷RF†–æ²Æ–¶RâvVçCóÂöƒà¢Ç6Æ73Ò&–çG&òÖ6÷’#à¢’—26†æv–ærv†òW6W26ögGv&Râ7'—FòÖ’6†ævR†÷rF†B6ögGv&RW6W2ÖöæW’à¢F¶RF†RFVâ×VW7F–öâf–VÆBFW7BöâF†R7—7FV×2f÷&Ö–ærBF†R–çFW'6V7F–öâà¢Â÷à¢ÂöF—cà¢Æ6–FR6Æ73Ò&–çG&òÖ6–FR#à¢ÇãÇ7G&öæsåF†RVW7F–öã£Â÷7G&öæsâv†B†Vç2FòÖöæW’v†VâF†R'W–W"—2æòÆöævW"‡VÖãóÂ÷à¢ÇåFVâVW7F–öç2âæòÆöv–ââöæRW6VgVÂ6–væÂ&÷WB†÷r–÷R6VRF†R6öÖ–ærvVçBV6öæö×’ãÂ÷à¢Âö6–FSà¢Â÷6V7F–öãà ¢Ç6V7F–öâ6Æ73Ò&vÖR×w&"&–ÖÆ&VÃÒ%F†RvVçBV6öæö×’f–VÆBFW7B#à¢ÆF—b6Æ73Ò&vÖR×æVÂ#à¢Ç6V7F–öâ6Æ73Ò'67&VVâ7F'B×67&VVâ—2Ö7F—fR"–CÒ'7F'B×67&VVâ"&–ÖÆ&VÆö'“Ò'7F'B×F—FÆR#à¢ÆF—cà¢ÆF—b6Æ73Ò'æVÂÖ†VB#à¢ÆF—cà¢Ç6Æ73Ò&¶–6¶W"#åF†RvVçBV6öæö×’f–VÆBFW7CÂ÷à¢Æƒ"6Æ73Ò'æVÂ×F—FÆR"–CÒ'7F'B×F—FÆR#äV–6²&VBöâ7'—Fò9r’fÇVVæ7’ãÂöƒ#à¢ÂöF—cà¢Ç7â6Æ73Ò&—77VRÖ6öFR#äÕ"òÂ÷7ãà¢ÂöF—cà¢ÆF—b6Æ73Ò'6†&VBÖ6ÆÆ÷WB"–CÒ'6†&VBÖ6ÆÆ÷WB"&öÆSÒ'7FGW2#ãÂöF—cà¢ÆF—b6Æ73Ò'7F'BÖFWF–Ç2"&–ÖÆ&VÃÒ$vÖRFWF–Ç2#à¢ÆF—b6Æ73Ò&FWF–Â#ãÇ7â6Æ73Ò&¶–6¶W"#å&÷VæCÂ÷7ããÇ7â6Æ73Ò&FWF–Â×fÇVR#ãVW7F–öç3Â÷7ããÂöF—cà¢ÆF—b6Æ73Ò&FWF–Â#ãÇ7â6Æ73Ò&¶–6¶W"#åF–ÖSÂ÷7ããÇ7â6Æ73Ò&FWF–Â×fÇVR#çâ2Ö–çWFW3Â÷7ããÂöF—cà¢ÆF—b6Æ73Ò&FWF–Â#ãÇ7â6Æ73Ò&¶–6¶W"#äÖöFSÂ÷7ããÇ7â6Æ73Ò&FWF–Â×fÇVR#äæòÆöv–ãÂ÷7ããÂöF—cà¢ÂöF—cà¢ÆF—b6Æ73Ò&W'&÷"×7FFR"–CÒ&W'&÷"×7FFR"&öÆSÒ&ÆW'B#à¢F†RVW7F–öâ&æ²6÷VÆBæ÷BÆöBâF†R'V–ÇBÖ–âf–VÆB6÷’—2&VG’Â'WB–÷R6â&WG'’F†RÆ—fRf–ÆRà¢ÂöF—cà¢ÂöF—cà¢ÆF—b6Æ73Ò'7F'BÖfö÷FW"#à¢Ç7â6Æ73Ò'66÷&RÖæ÷FR#ä'V–ÇBf÷"7W&–÷W2‡VÖç2æBgWGW&RvVçG2ãÂ÷7ãà¢Æ'WGFöâ6Æ73Ò&'WGFöâ"–CÒ'7F'BÖ'WGFöâ"G—SÒ&'WGFöâ#ä&Vv–âF†R&÷VæBÇ7â&–Ö†–FFVãÒ'G'VR#î(i#Â÷7ããÂö'WGFöãà¢ÂöF—cà¢Â÷6V7F–öãà ¢Ç6V7F–öâ6Æ73Ò'67&VVâV—¢×67&VVâ"–CÒ'V—¢×67&VVâ"&–ÖÆ&VÆÆVF'“Ò'VW7F–öâ×F—FÆR"&–ÖÆ—fSÒ'öÆ—FR#à¢ÆF—cà¢ÆF—b6Æ73Ò'V—¢×F÷#à¢Ç7â6Æ73Ò'VW7F–öâÖÖWF"–CÒ'VW7F–öâÖ6÷VçB#åVW7F–öâòÂ÷7ãà¢Ç7â6Æ73Ò'VW7F–öâÖÖWF"–CÒ'VW7F–öâÖ6FVv÷'’#åF†R7—7FVÓÂ÷7ãà¢ÂöF—cà¢ÆF—b6Æ73Ò'&öw&W72×G&6²"&–Ö†–FFVãÒ'G'VR#ãÆF—b6Æ73Ò'&öw&W72Ö&""–CÒ'&öw&W72Ö&"#ãÂöF—cãÂöF—cà¢ÂöF—cà¢ÆF—b6Æ73Ò'VW7F–öâÖ&Æö6²#à¢Ç6Æ73Ò&¶–6¶W""–CÒ'VW7F–öâÖ¶–6¶W"#å6–væÂ6†V6³Â÷à¢Æƒ"6Æ73Ò'VW7F–öâ×F—FÆR"–CÒ'VW7F–öâ×F—FÆR#ãÂöƒ#à¢ÆF—b6Æ73Ò&ç7vW'2"–CÒ&ç7vW'2"&öÆSÒ&w&÷W"&–ÖÆ&VÃÒ$ç7vW"6†ö–6W2#ãÂöF—cà¢ÆF—b6Æ73Ò&fVVF&6²"–CÒ&fVVF&6²"&öÆSÒ'7FGW2"&–ÖÆ—fSÒ'öÆ—FR"†–FFVããÂöF—cà¢ÂöF—cà¢ÆF—b6Æ73Ò'V—¢Öfö÷FW"#à¢Ç7â6Æ73Ò'66÷&RÖæ÷FR"–CÒ''Vææ–ær×66÷&R#å66÷&RòÂ÷7ãà¢Æ'WGFöâ6Æ73Ò&'WGFöâ"–CÒ&æW‡BÖ'WGFöâ"G—SÒ&'WGFöâ"F—6&ÆVCäæW‡BVW7F–öâÇ7â&–Ö†–FFVãÒ'G'VR#î(i#Â÷7ããÂö'WGFöãà¢ÂöF—cà¢Â÷6V7F–öãà ¢Ç6V7F–öâ6Æ73Ò'67&VVâ&W7VÇB×67&VVâ"–CÒ'&W7VÇB×67&VVâ"&–ÖÆ&VÆÆVF'“Ò'&W7VÇB×F—FÆR#à¢ÆF—b6Æ73Ò'&W7VÇBÖÆ–÷WB#à¢ÆF—b6Æ73Ò'66÷&RÖf–wW&R"–CÒ'66÷&RÖf–wW&R"&–ÖÆ&VÃÒ$f–æÂ66÷&R#à¢Ç7â6Æ73Ò'66÷&R×fÇVR"–CÒ'66÷&R×fÇVR#ãóÂ÷7ãà¢ÂöF—cà¢ÆF—b6Æ73Ò'&W7VÇBÖ6÷’#à¢Ç6Æ73Ò'&W7VÇBÖÆ&VÂ#å–÷W"f–VÆBæ÷FSÂ÷à¢Æƒ"–CÒ'&W7VÇB×F—FÆR#å6–væÂ&V6V—fVBãÂöƒ#à¢Ç–CÒ'&W7VÇBÖ6÷’#ãÂ÷à¢ÂöF—cà¢ÂöF—cà¢ÂöF—cà¢ÆF—b6Æ73Ò'&W7VÇBÖfö÷FW"#à¢Æ'WGFöâ6Æ73Ò&'WGFöâ"–CÒ'6†&RÖ'WGFöâ"G—SÒ&'WGFöâ#å6†&R&W7VÇBÇ7â&–Ö†–FFVãÒ'G'VR#î(i#Â÷7ããÂö'WGFöãà¢Æ'WGFöâ6Æ73Ò&'WGFöâ6V6öæF'’"–CÒ'&W7F'BÖ'WGFöâ"G—SÒ&'WGFöâ#å'Vâ—Bv–ãÂö'WGFöãà¢ÂöF—cà¢Â÷6V7F–öãà¢ÂöF—cà ¢Æ6–FR6Æ73Ò&6öçFW‡B×æVÂ"&–ÖÆ&VÆÆVF'“Ò&6öçFW‡B×F—FÆR#à¢ÆF—cà¢Ç6Æ73Ò&¶–6¶W"#åv†BÖW&¶ÆR—2G&6¶–æsÂ÷à¢Æƒ"–CÒ&6öçFW‡B×F—FÆR#åF†R6öçfW&vVæ6RÆ–W"ãÂöƒ#à¢ÂöF—cà¢ÇVÂ6Æ73Ò&6öçFW‡BÖÆ—7B#à¢ÆÆ“ãÇ7G&öæsãòF†R6–væÃÂ÷7G&öæsäöæRVÖW&v–ær6†–gBãÂöÆ“à¢ÆÆ“ãÇ7G&öæsã"òF†R7—7FVÓÂ÷7G&öæsä†÷rF†RFV6†æöÆöw’7GVÆÇ’v÷&·2ãÂöÆ“à¢ÆÆ“ãÇ7G&öæsã2òF†RÖöæW“Â÷7G&öæsåv†W&RV6öæöÖ–2fÇVRÖ÷fW2ãÂöÆ“à¢ÆÆ“ãÇ7G&öæsãBòF†RFVç6–öãÂ÷7G&öæsåv†B6÷VÆB7F÷—Bg&öÒv÷&¶–ærãÂöÆ“à¢Â÷VÃà¢Âö6–FSà¢Â÷6V7F–öãà ¢Æfö÷FW"6Æ73Ò'6—FRÖfö÷FW"#à¢Ç7âäÔW&¶ÆR&W6V&6‚òf–VÆBæ÷FRÂ÷7ãà¢Ç7âå&W6V&6‚BF†R–çFW'6V7F–öâöb7'—FòÂ’f×²f–ææ6–ÂÖ&¶WG3Â÷7ãà¢Âöfö÷FW#à¢ÂöÖ–ãà ¢Ç67&—B–CÒ'VW7F–öâÖfÆÆ&6²"G—SÒ&Æ–6F–öâö§6öâ#à¢°¢²&–B#¢&vVçB×vÆÆWB"Â&6FVv÷'’#¢%F†R7—7FVÒ"Â&¶–6¶W"#¢%6–væÂ6†V6²"Â'VW7F–öâ#¢%v‡’v÷VÆBâ’vVçBæVVBvÆÆWCò"Â&÷F–öç2#¥²%Fò7F÷&RÖöFVÂvV–v‡G2"Â%Fò†öÆBgVæG2æBWF†÷&—¦RG&ç67F–öç2"Â%Fğ&WÆ6RFF6VçFW"%ÒÂ&ç7vW"#£Â&W‡ÆæF–öâ#¢$vÆÆWBv—fW26ögGv&Rv’Fò†öÆBfÇVRæB6–vâG&ç67F–öç2v—F†÷WB‡VÖâ6Æ–6¶–ærWfW'’'WGFöââ'ÒÀ¢²&–B#¢'7F&ÆR×fÇVR"Â&6FVv÷'’#¢%F†RÖöæW’"Â&¶–6¶W"#¢$ÖöæW’6†V6²"Â'VW7F–öâ#¢%v†B—2F†RFVf–æ–ærFW6–vâvöÂöb7F&ÆV6ö–ãò"Â&÷F–öç2#¥²$f—†VB7WÇ’f÷&WfW""Â$7F&ÆRfÇVR&VÆF—fRFò&VfW&Væ6R76WB"Â$f7FW"–çFW&æWB6öææV7F–öâ"Â$&—fFR6ö6–ÂæWGv÷&²%ÒÂ&ç7vW"#£Â&W‡ÆæF–öâ#¢%7F&ÆV6ö–ç2&RFW6–væVBFòG&6²&VfW&Væ6RfÇVRÂögFVâf–B7W'&Væ7’Â6òF†W’6â&RW6VB2&VF–7F&ÆRVæ—Böb66÷VçBâ'ÒÀ¢²&–B#¢'6Ö'BÖ6öçG&7B"Â&6FVv÷'’#¢%F†R7—7FVÒ"Â&¶–6¶W"#¢%7—7FVÒ6†V6²"Â'VW7F–öâ#¢%v†B—26Ö'B6öçG&7B&W7BFW67&–&VB3ò"Â&÷F–öç2#¥²$ÆVvÂDb6–væVB'’Æw–W""Â$&öw&ÒF†B'Vç266÷&F–ærFò'VÆW2öâ&Æö6¶6†–â"Â$†&Gv&RvÆÆWBv—F‚F÷V6‡67&VVâ"Â$6†F&÷BG&–æVBöâÖ&¶WG2%ÒÂ&ç7vW"#£Â&W‡ÆæF–öâ#¢$6Ö'B6öçG&7B—26ögGv&RFWÆ÷–VBFò&Æö6¶6†–âF†BW†V7WFW2&VFVf–æVBÆöv–2v†Vâ—G26öæF—F–öç2&RÖWBâ'ÒÀ¢²&–B#¢'7VæBÖÆ–Ö—G2"Â&6FVv÷'’#¢%F†RFVç6–öâ"Â&¶–6¶W"#¢%6fWG’6†V6²"Â'VW7F–öâ#¢%v‡’Fò7VæF–ærÆ–Ö—G2ÖGFW"f÷"WFöæöÖ÷W2vVçG3ò"Â&÷F–öç2#¥²%F†W’Ö¶R&Æö6¶6†–ç2&—fFR"Â%F†W’&÷VæBF†RFÖvRg&öÒ&BFV6—6–öâ÷"6ö×&öÖ—6VBvVçB"Â%F†W’wV&çFVR&öf—B"Â%F†W’&VÖ÷fRF†RæVVBf÷"–FVçF—G’%ÒÂ&ç7vW"#£Â&W‡ÆæF–öâ#¢$Æ–Ö—G2GW&ââ÷VâÖVæFVB6ögGv&R7F–öâ–çFò&÷VæFVBW&Ö—76–öâÂv†–6‚—2W76VçF–Âv†VâF†R7F÷"6âÖ÷fRfÇVRöâ—G2÷vââ'ÒÀ¢²&–B#¢'6WGFÆVÖVçB"Â&6FVv÷'’#¢%F†RÖöæW’"Â&¶–6¶W"#¢$ÖöæW’6†V6²"Â'VW7F–öâ#¢$–â–ÖVçG2Âv†BFöW26WGFÆVÖVçBÖVãò"Â&÷F–öç2#¥²$FW6–væ–æræWrÆövò"Â%F†Rf–æÂG&ç6fW"æB&V6÷&F–æröbfÇVR&WGvVVâ'F–W2"Â%w&—F–ærÖ&¶WB&VF–7F–öâ"Â%G&–æ–ærâ’ÖöFVÂ%ÒÂ&ç7vW"#£Â&W‡ÆæF–öâ#¢%6WGFÆVÖVçB—2F†Rö–çBBv†–6‚F†R–ÖVçB—2f–æÆ—¦VBæBF†RÆVFvW"&VfÆV7G2v†òæ÷r÷vç2F†RfÇVRâ'ÒÀ¢²&–B#¢'G&Ff’"Â&6FVv÷'’#¢%F†RÆ–W'2"Â&¶–6¶W"#¢%Æ–W'26†V6²"Â'VW7F–öâ#¢%v†BFöW2'Ğ¥Æ–W'26†V6²"Â&W#¢'G&Ff’'ÒÀ¢&÷F–öç2#¥²%G&F—F–öæÂf–ææ6R"Â%G&F–ærf–æÂç7vW""Â%G&ç6fW&&ÆRf–ÆRf÷&ÖG2"Â$G—Röb’&Væ6†Ö&²%ÒÂ&ç7vW"#£Â&W‡ÆæF–öâ#¢%G&Df’—26†÷'F†æBf÷"F†RG&F—F–öæÂf–ææ6–Â7—7FVÓ¢&æ·2Â'&ö¶W&vW2Â–ÖVçBæWGv÷&·2ÂæB&VÆFVB–ç7F—GWF–öç2â'ÒÀ¢²&–B#¢&–çFW&æWB×–ÖVçG2"Â&6FVv÷'’#¢%F†RÖöæW’"Â&¶–6¶W"#¢$ÖöæW’6†V6²"Â'VW7F–öâ#¢%v‡’Ö–v‡B7F&ÆV6ö–ç2f—B–çFW&æWBÖæF—fR–ÖVçG3ò"Â&÷F–öç2#¥²%F†W’6âÖ÷fRfÇVR&öw&ÖÖF–6ÆÇ’æB&÷VæBF†R6Æö6²"Â%F†W’öæÇ’v÷&²–ç6–FRöæR&æ²'&æ6‚"Â%F†W’VÆ–Ö–æFRWfW'’6ö×Æ–æ6R&WV—&VÖVçB"Â%F†W’6âöæÇ’&R7VçB'’‡VÖç2%ÒÂ&ç7vW"#£Â&W‡ÆæF–öâ#¢%&öw&ÖÖ&ÆRÂÇv—2Ööâ6WGFÆVÖVçB—2W6VgVÂ&÷W'G’v†Vâ6ögGv&RæVVG2Fò’6ögGv&R7&÷72F–ÖR¦öæW2æBÆFf÷&×2â'ÒÀ¢²&–B#¢'W&Ö—76–öç2ÖÆ–W""Â&6FVv÷'’#¢%F†R7—7FVÒ"Â&¶–6¶W"#¢%7—7FVÒ6†V6²"Â'VW7F–öâ#¢%v†–6‚Æ–W"ç7vW'2F†RVW7F–öâ(	Åv†B—2F†—2vVçBÆÆ÷vVBFòFóş(	Ò"Â&÷F–öç2#¥²%W&Ö—76–öç2æB7VæF–ær6öçG&öÇ2"Â%F†R67&VVâ'&–v‡FæW72Æ–W""Â%F†R†VFÆ–æRÆ–W""Â%F†RvVF†W"Æ–W"%ÒÂ&ç7vW"#£Â&W‡ÆæF–öâ#¢$–FVçF—G’6—2v†ò÷"v†B—27F–æs²W&Ö—76–öç2FVf–æRF†R7F–öç2æBÆ–Ö—G2F†B7F÷"—2ÆÆ÷vVBFòW6Râ'ÒÀ¢²&–B#¢&V6öæöÖ–2Ö7F÷""Â&6FVv÷'’#¢%F†R6–væÂ"Â&¶–6¶W"#¢%6–væÂ6†V6²"Â'VW7F–öâ#¢%v†B—2F†R¶W’6†–gB&V†–æBF†R–FVöbvVçF–2f–ææ6Sò"Â&÷F–öç2#¥²%6ögGv&R&V6öÖW2âV6öæöÖ–27F÷"F†B6â–æ—F–FRG&ç67F–öç2"Â$‡VÖç27F÷W6–ær&æ·2VçF—&VÇ’"Â$&Æö6¶6†–ç27F÷æVVF–ær'VÆW2"Â$’&WÆ6W2WfW'’f–ææ6–Â–ç7F—GWF–öâ%ÒÂ&ç7vW"#£Â&W‡ÆæF–öâ#¢%F†R–çFW&W7F–ær6†–gB—2æ÷BF†B‡VÖç2F—6V"â—B—2F†B6ögGv&R6â&Vv–â7F–ær2'W–W"Â6VÆÆW"Â÷"÷W&F÷"–ç6–FRâV6öæöÖ–27—7FVÒâ'ÒÀ¢²&–B#¢&vVçB×7F6²"Â&6FVv÷'’#¢%F†R7—7FVÒ"Â&¶–6¶W"#¢%7—7FVÒ6†V6²"Â'VW7F–öâ#¢%v†–6‚6WVVæ6R&W7BÖF6†W26–×ÆRvVçF–2f–ææ6R7F6³ò"Â&÷F–öç2#¥²$vVçB(i"vÆÆWB(i"w&çG2(i"–ÖVçB&–Â(i"7F&ÆV6ö–â"Â%7F&ÆV6ö–â(i"Æövò(i"6†F&÷B(i"7&VG6†VWB(i"&æ²"Â%†öæR(i"77v÷&B(i"6ÖW&(i"ÖöFVÂ(i"'&÷w6W""Â$W†6†ævR(i"ÖVÖR(i"vÖR(i"VÖ–Â(i"6Æ÷VB%ÒÂ&ç7vW"#£Â&W‡ÆæF–öâ#¢%F†R7F6²6öææV7G2–çFVÆÆ–vVæ6RFò–FVçF—G’Â6öçG&öÆÆVBWF†÷&—G’Â–ÖVçB&÷Fö6öÂÂæB7F&ÆRVæ—BöbfÇVRâ'Ğ¢Ğ¢Â÷67&—Cà ¢Ç67&—Cà¢‚‚’Óâ°¢6öç7B67&VVç2Ò°¢7F'C¢Fö7VÖVçBçVW'•6VÆV7F÷"‚"77F'B×67&VVâ"’À¢V—£¢Fö7VÖVçBçVW'•6VÆV7F÷"‚"7V—¢×67&VVâ"’À¢&W7VÇC¢Fö7VÖVçBçVW'•6VÆV7F÷"‚"7&W7VÇB×67&VVâ"¢ÒÀ¢6öç7B7F'D'WGFöâÒFö7VÖVçBçVW'•6VÆV7F÷"‚"77F'BÖ'WGFöâ"’À¢6öç7BæW‡D'WGFöâÒFö7VÖVçBçVW'•6VÆV7F÷"‚"6æW‡BÖ'WGFöâ"’À¢6öç7B&W7F'D'WGFöâÒFö7VÖVçBçVW'•6VÆV7F÷"‚"7&W7F'BÖ'WGFöâ"’À¢6öç7B6†&T'WGFöâÒFö7VÖVçBçVW'•6VÆV7F÷"‚"76†&RÖ'WGFöâ"’À¢6öç7Bç7vW'2ÒFö7VÖVçBçVW'•6VÆV7F÷"‚"6ç7vW'2"’À¢6öç7BfVVF&6²ÒFö7VÖVçBçVW'•6VÆV7F÷"‚"6fVVF&6²"’À¢6öç7BVW7F–öåF—FÆRÒFö7VÖVçBçVW'•6VÆV7F÷"‚"7VW7F–öâ×F—FÆR"’À¢6öç7BVW7F–öä6÷VçBÒFö7VÖVçBçVW'•6VÆV7F÷"‚"7VW7F–öâÖ6÷VçB"’À¢6öç7BVW7F–öä6FVv÷'’ÒFö7VÖVçBçVW'•6VÆV7F÷"‚"7VW7F–öâÖ6FVv÷'’"’À¢6öç7BVW7F–öä¶–6¶W"ÒFö7VÖVçBçVW'•6VÆV7F÷"‚"7VW7F–öâÖ¶–6¶W""’À¢6öç7B&öw&W74&"ÒFö7VÖVçBçVW'•6VÆV7F÷"‚"7&öw&W72Ö&""’À¢6öç7B'Vææ–æu66÷&RÒFö7VÖVçBçVW'•6VÆV7F÷"‚"7'Vææ–ær×66÷&R"’À¢6öç7B66÷&UfÇVRÒFö7VÖVçBçVW'•6VÆV7F÷"‚"766÷&R×fÇVR"’À¢6öç7B66÷&Tf–wW&RÒFö7VÖVçBçVW'•6VÆV7F÷"‚"766÷&RÖf–wW&R"’À¢6öç7B&W7VÇEF—FÆRÒFö7VÖVçBçVW'•6VÆV7F÷"‚"7&W7VÇB×F—FÆR"’À¢6öç7B&W7VÇD6÷’ÒFö7VÖVçBçVW'•6VÆV7F÷"‚"7&W7VÇBÖ6÷’"’À¢6öç7B6†&VD6ÆÆ÷WBÒFö7VÖVçBçVW'•6VÆV7F÷"‚"76†&VBÖ6ÆÆ÷WB"’À¢6öç7BW'&÷%7FFRÒFö7VÖVçBçVW'•6VÆV7F÷"‚"6W'&÷"×7FFR"’À¢6öç7BfÆÆ&6µVW7F–öç2Ò¥4ôâç'6R†Fö7VÖVçBçVW'•6VÆV7F÷"‚"7VW7F–öâÖfÆÆ&6²"’çFW‡D6öçFVçB“°¢6öç7BÆWGFW'2Ò²$"Â$""Â$2"Â$B%Ó° ¢ÆWBVW7F–öä&æ²ÒfÆÆ&6µVW7F–öç3°¢ÆWB&÷VæBÒµÓ°¢ÆWB7W'&VçD–æFW‚Ò°¢ÆWB66÷&RÒ°¢ÆWB†4ç7vW&VBÒfÇ6S° ¢gVæ7F–öâ6†÷u67&VVâ†æÖR’°¢ö&¦V7BæVçG&–W2‡67&VVç2’æf÷$V6‚‚…¶¶W’Â67&VVåÒ’Óâ°¢67&VVâæ6Æ74Æ—7BçFövvÆR‚&—2Ö7F—fR"Â¶W’ÓÓÒæÖR“°¢Ò“°¢Ğ ¢gVæ7F–öâ'6U6†&VE66÷&R‚’°¢6öç7B&×2ÒæWrU$Å6V&6…&×2‡v–æF÷ræÆö6F–öâç6V&6‚“°¢6öç7B6†&VE66÷&RÒçVÖ&W"‡&×2ævWB‚'66÷&R"’“°¢6öç7BF÷FÂÒçVÖ&W"‡&×2ævWB‚'F÷FÂ"’ÇÂ°¢–b‚çVÖ&W"æ—4f–æ—FR‡6†&VE66÷&R’ÇÂ6†&VE66÷&RÂÇÂ6†&VE66÷&RâF÷FÂ’&WGW&ã°¢6†&VD6ÆÆ÷WBçFW‡D6öçFVçBÒ&Wf–÷W2Æ–W"66÷&VBG·6†&VE66÷&WÒòG·F÷FÇÒâF¶RF†Rf–VÆBFW7BæB6VRv†W&R–÷RÆæBæ°¢6†&VD6ÆÆ÷WBæ6Æ74Æ—7BæFB‚&—2×f—6–&ÆR"“°¢Ğ ¢gVæ7F–öâ&VæFW%VW7F–öâ‚’°¢6öç7B—FVÒÒ&÷VæE¶7W'&VçD–æFW…Ó°¢†4ç7vW&VBÒfÇ6S°¢æW‡D'WGFöâæF—6&ÆVBÒG'VS°¢æW‡D'WGFöâçFW‡D6öçFVçBÒ7W'&VçD–æFW‚ÓÓÒ&÷VæBæÆVæwF‚Òò%6VR–÷W"&W7VÇB(i""¢$æW‡BVW7F–öâ(i"#°¢fVVF&6²æ†–FFVâÒG'VS°¢fVVF&6²æ–ææW$…DÔÂÒ"#°¢VW7F–öä6÷VçBçFW‡D6öçFVçBÒVW7F–öâGµ7G&–ær†7W'&VçD–æFW‚²’çE7F'Bƒ"Â#"—ÒòG·&÷VæBæÆVæwF‡Ö°¢VW7F–öä6FVv÷'’çFW‡D6öçFVçBÒ—FVÒæ6FVv÷'“°¢VW7F–öä¶–6¶W"çFW‡D6öçFVçBÒ—FVÒæ¶–6¶W#°¢VW7F–öåF—FÆRçFW‡D6öçFVçBÒ—FVÒçVW7F–öã°¢&öw&W74&"ç7G–ÆRçv–GF‚ÒG²‚†7W'&VçD–æFW‚²’ò&÷VæBæÆVæwF‚’¢ÒV°¢'Vææ–æu66÷&RçFW‡D6öçFVçBÒ66÷&RG·66÷&WÒòG·&÷VæBæÆVæwF‡Ö°¢ç7vW'2æ–ææW$…DÔÂÒ"#° ¢—FVÒæ÷F–öç2æf÷$V6‚‚†÷F–öâÂ÷F–öä–æFW‚’Óâ°¢6öç7B'WGFöâÒFö7VÖVçBæ7&VFTVÆVÖVçB‚&'WGFöâ"“°¢'WGFöâæ6Æ74æÖRÒ&ç7vW"#°¢'WGFöâçG—RÒ&'WGFöâ#°¢'WGFöâæFF6WBæ–æFW‚Ò7G&–ær†÷F–öä–æFW‚“°¢'WGFöâæ–ææW$…DÔÂÒÇ7â6Æ73Ò&ç7vW"ÖÆWGFW""&–Ö†–FFVãÒ'G'VR#âG¶ÆWGFW'5¶÷F–öä–æFW…×ÓÂ÷7ããÇ7ãâG¶÷F–öçÓÂ÷7ãæ°¢'WGFöâæFDWfVçDÆ—7FVæW"‚&6Æ–6²"Â‚’Óâ6VÆV7Dç7vW"†÷F–öä–æFW‚’“°¢ç7vW'2æVæD6†–ÆB†'WGFöâ“°¢Ò“°¢Ğ ¢gVæ7F–öâ6VÆV7Dç7vW"‡6VÆV7FVD–æFW‚’°¢–b††4ç7vW&VB’&WGW&ã°¢†4ç7vW&VBÒG'VS°¢6öç7B—FVÒÒ&÷VæE¶7W'&VçD–æFW…Ó°¢6öç7B6÷'&V7BÒ6VÆV7FVD–æFW‚ÓÓÒ—FVÒæç7vW#°¢–b†6÷'&V7B’66÷&R³Ò° ¢²ââæç7vW'2æ6†–ÆG&VåÒæf÷$V6‚‚†'WGFöâÂ–æFW‚’Óâ°¢'WGFöâæF—6&ÆVBÒG'VS°¢–b†–æFW‚ÓÓÒ—FVÒæç7vW"’'WGFöâæ6Æ74Æ—7BæFB‚&—2Ö6÷'&V7B"“°¢VÇ6R–b†–æFW‚ÓÓÒ6VÆV7FVD–æFW‚’'WGFöâæ6Æ74Æ—7BæFB‚&—2×w&öær"“°¢VÇ6R'WGFöâæ6Æ74Æ—7BæFB‚&—2ÖF–Ò"“°¢Ò“° ¢fVVF&6²æ†–FFVâÒfÇ6S°¢fVVF&6²æ–ææW$…DÔÂÒÇ7G&öæsâG¶6÷'&V7Bò$6÷'&V7B6–væÂâ"¢æ÷BV—FRâF†Rç7vW"—2G¶ÆWGFW'5¶—FVÒæç7vW%×ÒæÓÂ÷7G&öæsâG¶—FVÒæW‡ÆæF–öçÖ°¢'Vææ–æu66÷&RçFW‡D6öçFVçBÒ66÷&RG·66÷&WÒòG·&÷VæBæÆVæwF‡Ö°¢æW‡D'WGFöâæF—6&ÆVBÒfÇ6S°¢æW‡D'WGFöâæfö7W2‚“°¢Ğ ¢gVæ7F–öâ&Vv–å&÷VæB‚’°¢&÷VæBÒ²ââçVW7F–öä&æµÒç6Æ–6RƒÂ“°¢7W'&VçD–æFW‚Ò°¢66÷&RÒ°¢6†÷u67&VVâ‚'V—¢"“°¢&VæFW%VW7F–öâ‚“°¢VW7F–öåF—FÆRæfö7W3òâ‚“°¢Ğ ¢gVæ7F–öâf–æ—6…&÷VæB‚’°¢6öç7BW&6VçFvRÒ66÷&Rò&÷VæBæÆVæwFƒ°¢6öç7BævÆRÒG´ÖF‚æÖ‚ƒÂÖF‚æÖ–âƒ3cÂW&6VçFvR¢3c’—ÖFVv°¢66÷&UfÇVRçFW‡D6öçFVçBÒG·66÷&WÒòG·&÷VæBæÆVæwF‡Ö°¢66÷&Tf–wW&Rç7G–ÆRç6WE&÷W'G’‚"Ò×66÷&RÖævÆR"ÂævÆR“°¢–b‡W&6VçFvRãÒã‚’°¢&W7VÇEF—FÆRçFW‡D6öçFVçBÒ%–÷R6VRF†R7F6²â#°¢&W7VÇD6÷’çFW‡D6öçFVçBÒ%–÷R6â6öææV7B–çFVÆÆ–vVæ6RÂW&Ö—76–öâÂ–ÖVçB&–Ç2ÂæB6WGFÆVÖVçBâ¶VWföÆÆ÷v–ærF†RÖöæW’(	BF†B—2v†W&RF†R–çFW&W7F–ærVFvR66W2Æ—fRâ#°¢ÒVÇ6R–b‡W&6VçFvRãÒãR’°¢&W7VÇEF—FÆRçFW‡D6öçFVçBÒ%F†R6–væÂ—2f÷&Ö–ærâ#°¢&W7VÇD6÷’çFW‡D6öçFVçBÒ%–÷R†fRF†RÖ–â–V6W2âF†RæW‡B7FW—2ÆV&æ–ær†÷r–FVçF—G’ÂW&Ö—76–öç2ÂæB6WGFÆVÖVçBGW&ââ’6&–Æ—G’–çFòâV6öæöÖ–27F÷"â#°¢ÒVÇ6R°¢&W7VÇEF—FÆRçFW‡D6öçFVçBÒ%7F'Bv—F‚F†R7—7FVÒâ#°¢&W7VÇD6÷’çFW‡D6öçFVçBÒ%F†RvVçBV6öæö×’—27F–ÆÂ&V–ær76VÖ&ÆVBâ&Vv–âv—F‚F†R7F6³¢v†ò7G2Âv†BF†W’6âFòÂ†÷rfÇVRÖ÷fW2ÂæBv†W&RF†RÆ–Ö—G26—Bâ#°¢Ğ¢6†÷u67&VVâ‚'&W7VÇB"“°¢Ğ ¢7–æ2gVæ7F–öâ6†&U&W7VÇB‚’°¢6öç7B6†&UW&ÂÒæWrU$2‡v–æF÷ræÆö6F–öâæ‡&Vb“°¢6†&UW&Âç6V&6‚Ò÷66÷&SÒG·66÷&WÒgF÷FÃÒG·&÷VæBæÆVæwF‡Ö°¢6öç7B6†&UFW‡BÒ’66÷&VBG·66÷&WÒòG·&÷VæBæÆVæwF‡ÒöâF†RvVçBVMÄDEH9DŒ81

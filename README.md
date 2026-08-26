@@ -9,6 +9,7 @@ Repository: https://github.com/akang123/crypto-ai-trivia
 ## Files
 
 - `index.html` — the full responsive game and interface.
+- `assets/merkle-icon.png` — the Merkle Research logo used in the header, browser icon, and social previews.
 - `questions.json` — the editable 10-question bank.
 - `announcement.md` — launch copy for the newsletter or social post.
 - `brand.md` — the black-and-white visual direction.
