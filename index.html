@@ -28,12 +28,12 @@
         --soft-white: #d4d4cf;
         --muted: #a1a19b;
         --dim: #73736e;
-        --shadow: rgba(0, 0, 0, 0.38);
+        --shadow: rgba(0, 0, 0.38);
       }
 
       * { box-sizing: border-box; }
 
-      html { min-width: 320px; scroll-behavior: smooth; }
+      html { min-width: 320px; scroll-behavior: smooth }
 
       body {
         margin: 0;
@@ -44,7 +44,7 @@
           var(--black);
         background-size: 42px 42px;
         color: var(--white);
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif;
         line-height: 1.5;
       }
 
@@ -97,16 +97,13 @@
       }
 
       .brand-mark {
-        display: grid;
-        width: 36px;
-        height: 36px;
-        place-items: center;
+        display: block;
+        width: 40px;
+        height: 40px;
+        flex: 0 0 auto;
         border: 1px solid var(--line-strong);
-        background: var(--white);
-        color: var(--black);
-        font-size: 0.92rem;
-        font-weight: 950;
-        letter-spacing: -0.12em;
+        background: var(--black);
+        object-fit: cover;
       }
 
       .topbar-note {
@@ -206,7 +203,7 @@
 
       .panel-title {
         max-width: 560px;
-        margin: 16px 0 0;
+        margin: 17px 0 0;
         font-size: clamp(2rem, 4vw, 3.7rem);
         line-height: 0.98;
         letter-spacing: -0.065em;
@@ -392,7 +389,7 @@
       .feedback {
         min-height: 72px;
         margin-top: 22px;
-        padding: 16px 18px;
+        padding: 17px 18px;
         border-left: 3px solid var(--line-strong);
         background: var(--panel-raised);
         color: var(--soft-white);
@@ -516,7 +513,7 @@
       .site-footer {
         display: flex;
         justify-content: space-between;
-        gap: 22px;
+        gap : 22px;
         padding: 32px 0 0;
         color: var(--dim);
         font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
@@ -535,7 +532,7 @@
         font-size: 0.9rem;
       }
 
-      .error-state.is-visible { display: block; }
+      .error-state.is-visible { display: block+ }
 
       @media (max-width: 860px) {
         .intro,
@@ -551,7 +548,7 @@
       }
 
       @media (max-width: 560px) {
-        .site-shell { width: min(100% - 24px, 1180px); padding-top: 12px; }
+        .site-shell { width: min(100% - 24px, 1184px) padding-top: 12px; }
 
         .topbar-note { display: none; }
 
@@ -593,12 +590,11 @@
     <main class="site-shell">
       <header class="topbar">
         <a class="brand" href="https://merkle.heavenvy.com" aria-label="Merkle Research home">
-          <span class="brand-mark" aria-hidden="true">M</span>
+          <img class="brand-mark" src="assets/merkle-icon.png" alt="Merkle Research logo" width="40" height="40" decoding="async" />
           <span>MERKLE RESEARCH</span>
         </a>
         <span class="topbar-note">Crypto √ó AI √ó Financial Systems</span>
       </header>
-
       <section class="intro" aria-labelledby="page-title">
         <div>
           <p class="eyebrow">A launch field note / 001</p>
@@ -622,22 +618,22 @@
                 <div>
                   <p class="kicker">The Agent Economy Field Test</p>
                   <h2 class="panel-title" id="start-title">A quick read on crypto √ó AI fluency.</h2>
+                  </div>
+                  <span class="issue-code">MR / 001</span>
                 </div>
-                <span class="issue-code">MR / 001</span>
+                <div class="shared-callout" id="shared-callout" role="status"></div>
+                <div class="start-details" aria-label="Game details">
+                  <div class="detail"><span class="kicker">Round</span><span class="detail-value">10 questions</span></div>
+                  <div class="detail"><span class="kicker">Time</span><span class="detail-value">~ 3 minutes</sspan></div>
+                  <div class="detail"><span class="kicker">Mode</span><span class="detail-value">No login</span></div>
+                </div>
+                <div class="error-state" id="error-state" role="alert">
+                  The question bank could not load. The built-in field copy is ready, but you can retry the live file.
+                </div>
               </div>
-              <div class="shared-callout" id="shared-callout" role="status"></div>
-              <div class="start-details" aria-label="Game details">
-                <div class="detail"><span class="kicker">Round</span><span class="detail-value">10 questions</span></div>
-                <div class="detail"><span class="kicker">Time</span><span class="detail-value">~ 3 minutes</span></div>
-                <div class="detail"><span class="kicker">Mode</span><span class="detail-value">No login</span></div>
-              </div>
-              <div class="error-state" id="error-state" role="alert">
-                The question bank could not load. The built-in field copy is ready, but you can retry the live file.
-              </div>
-            </div>
             <div class="start-footer">
-              <span class="score-note">Built for curious humans and future agents.</span>
-              <button class="button" id="start-button" type="button">Begin the round <span aria-hidden="true">‚Üí</span></button>
+                <span class="score-note">Built for curious humans and future agents.</span>
+                <button class="button" id="start-button" type="button">Begin the round <span aria-hidden="true">‚Üí</span></button>
             </div>
           </section>
 
@@ -708,177 +704,4 @@
         {"id":"settlement","category":"The Money","kicker":"Money check","question":"In payments, what does settlement mean?","options":["Designing a new logo","The final transfer and recording of value between parties","Writing a market prediction","Training an AI model"],"answer":1,"explanation":"Settlement is the point at which the payment is finalized and the ledger reflects who now owns the value."},
         {"id":"tradfi","category":"The Players","kicker":"Players check","question":"What does ‚ÄúTradFi‚Äù refer to?","options":["Traditional finance","Trading a final answer","Transferable file formats","A type of AI benchmark"],"answer":0,"explanation":"TradFi is shorthand for the traditional financial system: banks, brokerages, payment networks, and related institutions."},
         {"id":"internet-payments","category":"The Money","kicker":"Money check","question":"Why might stablecoins fit internet-native payments?","options":["They can move value programmatically and around the clock","They only work inside one bank branch","They eliminate every compliance requirement","They can only be spent by humans"],"answer":0,"explanation":"Programmable, always-on settlement is a useful property when software needs to pay software across time zones and platforms."},
-        {"id":"permissions-layer","category":"The System","kicker":"System check","question":"Which layer answers the question ‚Äúwhat is this agent allowed to do?‚Äù","options":["Permissions and spending controls","The screen brightness layer","The headline layer","The weather layer"],"answer":0,"explanation":"Identity says who or what is acting; permissions define the actions and limits that actor is allowed to use."},
-        {"id":"economic-actor","category":"The Signal","kicker":"Signal check","question":"What is the key shift behind the idea of agentic finance?","options":["Software becomes an economic actor that can initiate transactions","Humans stop using banks entirely","Blockchains stop needing rules","AI replaces every financial institution"],"answer":0,"explanation":"The interesting shift is not that humans disappear. It is that software can begin acting as a buyer, seller, or operator inside an economic system."},
-        {"id":"agent-stack","category":"The System","kicker":"System check","question":"Which sequence best matches a simple agentic finance stack?","options":["Agent ‚Üí wallet ‚Üí permissions ‚Üí payment rail ‚Üí stablecoin","Stablecoin ‚Üí logo ‚Üí chatbot ‚Üí spreadsheet ‚Üí bank","Phone ‚Üí password ‚Üí camera ‚Üí model ‚Üí browser","Exchange ‚Üí meme ‚Üí game ‚Üí email ‚Üí cloud"],"answer":0,"explanation":"The stack connects intelligence to identity, controlled authority, a payment protocol, and a stable unit of value."}
-      ]
-    </script>
-
-    <script>
-      (() => {
-        const screens = {
-          start: document.querySelector("#start-screen"),
-          quiz: document.querySelector("#quiz-screen"),
-          result: document.querySelector("#result-screen")
-        };
-        const startButton = document.querySelector("#start-button");
-        const nextButton = document.querySelector("#next-button");
-        const restartButton = document.querySelector("#restart-button");
-        const shareButton = document.querySelector("#share-button");
-        const answers = document.querySelector("#answers");
-        const feedback = document.querySelector("#feedback");
-        const questionTitle = document.querySelector("#question-title");
-        const questionCount = document.querySelector("#question-count");
-        const questionCategory = document.querySelector("#question-category");
-        const questionKicker = document.querySelector("#question-kicker");
-        const progressBar = document.querySelector("#progress-bar");
-        const runningScore = document.querySelector("#running-score");
-        const scoreValue = document.querySelector("#score-value");
-        const scoreFigure = document.querySelector("#score-figure");
-        const resultTitle = document.querySelector("#result-title");
-        const resultCopy = document.querySelector("#result-copy");
-        const sharedCallout = document.querySelector("#shared-callout");
-        const errorState = document.querySelector("#error-state");
-        const fallbackQuestions = JSON.parse(document.querySelector("#question-fallback").textContent);
-        const letters = ["A", "B", "C", "D"];
-
-        let questionBank = fallbackQuestions;
-        let round = [];
-        let currentIndex = 0;
-        let score = 0;
-        let hasAnswered = false;
-
-        function showScreen(name) {
-          Object.entries(screens).forEach(([key, screen]) => {
-            screen.classList.toggle("is-active", key === name);
-          });
-        }
-
-        function parseSharedScore() {
-          const params = new URLSearchParams(window.location.search);
-          const sharedScore = Number(params.get("score"));
-          const total = Number(params.get("total")) || 10;
-          if (!Number.isFinite(sharedScore) || sharedScore < 0 || sharedScore > total) return;
-          sharedCallout.textContent = `A previous player scored ${sharedScore}/${total}. Take the field test and see where you land.`;
-          sharedCallout.classList.add("is-visible");
-        }
-
-        function renderQuestion() {
-          const item = round[currentIndex];
-          hasAnswered = false;
-          nextButton.disabled = true;
-          nextButton.textContent = currentIndex === round.length - 1 ? "See your result ‚Üí" : "Next question ‚Üí";
-          feedback.hidden = true;
-          feedback.innerHTML = "";
-          questionCount.textContent = `Question ${String(currentIndex + 1).padStart(2, "0")} / ${round.length}`;
-          questionCategory.textContent = item.category;
-          questionKicker.textContent = item.kicker;
-          questionTitle.textContent = item.question;
-          progressBar.style.width = `${((currentIndex + 1) / round.length) * 100}%`;
-          runningScore.textContent = `Score ${score} / ${round.length}`;
-          answers.innerHTML = "";
-
-          item.options.forEach((option, optionIndex) => {
-            const button = document.createElement("button");
-            button.className = "answer";
-            button.type = "button";
-            button.dataset.index = String(optionIndex);
-            button.innerHTML = `<span class="answer-letter" aria-hidden="true">${letters[optionIndex]}</span><span>${option}</span>`;
-            button.addEventListener("click", () => selectAnswer(optionIndex));
-            answers.appendChild(button);
-          });
-        }
-
-        function selectAnswer(selectedIndex) {
-          if (hasAnswered) return;
-          hasAnswered = true;
-          const item = round[currentIndex];
-          const correct = selectedIndex === item.answer;
-          if (correct) score += 1;
-
-          [...answers.children].forEach((button, index) => {
-            button.disabled = true;
-            if (index === item.answer) button.classList.add("is-correct");
-            else if (index === selectedIndex) button.classList.add("is-wrong");
-            else button.classList.add("is-dim");
-          });
-
-          feedback.hidden = false;
-          feedback.innerHTML = `<strong>${correct ? "Correct signal." : `Not quite. The answer is ${letters[item.answer]}.`}</strong>${item.explanation}`;
-          runningScore.textContent = `Score ${score} / ${round.length}`;
-          nextButton.disabled = false;
-          nextButton.focus();
-        }
-
-        function beginRound() {
-          round = [...questionBank].slice(0, 10);
-          currentIndex = 0;
-          score = 0;
-          showScreen("quiz");
-          renderQuestion();
-          questionTitle.focus?.();
-        }
-
-        function finishRound() {
-          const percentage = score / round.length;
-          const angle = `${Math.max(0, Math.min(360, percentage * 360))}deg`;
-          scoreValue.textContent = `${score}/${round.length}`;
-          scoreFigure.style.setProperty("--score-angle", angle);
-          if (percentage >= 0.8) {
-            resultTitle.textContent = "You see the stack.";
-            resultCopy.textContent = "You can connect intelligence, permission, payment rails, and settlement. Keep following the money ‚Äî that is where the interesting edge cases live.";
-          } else if (percentage >= 0.5) {
-            resultTitle.textContent = "The signal is forming.";
-            resultCopy.textContent = "You have the main pieces. The next step is learning how identity, permissions, and settlement turn an AI capability into an economic actor.";
-          } else {
-            resultTitle.textContent = "Start with the system.";
-            resultCopy.textContent = "The agent economy is still being assembled. Begin with the stack: who acts, what they can do, how value moves, and where the limits sit.";
-          }
-          showScreen("result");
-        }
-
-        async function shareResult() {
-          const shareUrl = new URL(window.location.href);
-          shareUrl.search = `?score=${score}&total=${round.length}`;
-          const shareText = `I scored ${score}/${round.length} on the Agent Economy Field Test by Merkle Research. Can you beat it?`;
-          try {
-            if (navigator.share) {
-              await navigator.share({ title: "The Agent Economy Field Test", text: shareText, url: shareUrl.toString() });
-            } else if (navigator.clipboard) {
-              await navigator.clipboard.writeText(`${shareText} ${shareUrl.toString()}`);
-              shareButton.textContent = "Result copied ‚úì";
-              window.setTimeout(() => { shareButton.innerHTML = "Share result <span aria-hidden=\"true\">‚Üó</span>"; }, 2200);
-            } else {
-              window.prompt("Copy your result link", shareUrl.toString());
-            }
-          } catch (error) {
-            if (error.name !== "AbortError") window.prompt("Copy your result link", shareUrl.toString());
-          }
-        }
-
-        async function loadQuestions() {
-          try {
-            const response = await fetch("questions.json", { cache: "no-store" });
-            if (!response.ok) throw new Error("Question file unavailable");
-            const loaded = await response.json();
-            if (!Array.isArray(loaded) || loaded.length < 10) throw new Error("Question file is incomplete");
-            questionBank = loaded;
-          } catch (error) {
-            errorState.classList.add("is-visible");
-          }
-          parseSharedScore();
-        }
-
-        startButton.addEventListener("click", beginRound);
-        nextButton.addEventListener("click", () => {
-          if (!hasAnswered) return;
-          if (currentIndex === round.length - 1) finishRound();
-          else { currentIndex += 1; renderQuestion(); }
-        });
-        restartButton.addEventListener("click", beginRound);
-        shareButton.addEventListener("click", shareResult);
-        loadQuestions();
-      })();
-    </script>
-  </body>
-</html>
+        {"id":"permissions-layer","category":"The System","kicker":"System check","question":"Which layer answers the question ‚Ääv∞Æâ‡ä{Æ◊ù∂ä%j∏.ôÈÌùÁù≤Àh¶ó´Ö™lq©e¬)e}®•vÁ¢ûˆ•â÷⁄±Ó∏!ßâ◊ßµ©e »hÆ◊ßyﬂÌÆÈ‹j◊ùjwZñ◊´y–Ëûã^≈Á.µ‰Ë¢WñV•≠Êù ßz∂≠yŸË¡gßyÁlyÍﬁ≤Èm")Ïzª^v†yª≠ô¨õzz-~Èe…ÏZr‘·ä»¨Æ+$»∑≠≥¢µ˙+¢Îi∫⁄Óûw´ö(!µˆ¢ñz¢i¢∂'‚ûˆ•â”^yŸËµ¯±æ&û∆◊´ù©b} &ö+bùßozª^ûŸrräÎ∫õbù◊±"{h¢WñR&j{öñ\¢û«´µÁhû\úÜÈ‰≤ñ´∂&•jwbû˜ßµÁl¢gúÖ©‡z»ßΩ©bu∂¨{Æ,•ß≤†x»†Ü÷ﬁiÿ¨jÀ^≠gßyÁlyÍﬁ≤ÈmNâö…∑¢û◊´qÍmNä%q©e≤ÊÊä€^w¢µgö≠Ëßjv• »¨i˚^Æ⁄(ï∆•î-π©e ⁄(ï∆•ñg¨±®¶∑¨z{Häw%π◊ùñâ‡%#çjweäG• ⁄(ñ)Ô°∆≠äâÊk(ZΩÊﬁzvúqÍmy÷Ó∂z-¢Îi∫‹û¥âÌÜ+"û◊´}ß∂ä%q©e≠Î.ñ€.≤Ê•ó)ﬁ∆Ÿû≤∆†xãaj…Ì≠ÎnÆwùô¨õy€ûÜËYÈﬁy‹ä“ﬁ∂«!y…&k&ﬁq©eûã\ñãtãz⁄(ï∆•ñ)Ô°∆≠äâ‚û⁄⁄û«+äõ^ù◊ù¬+a"◊buÈ›N¨ À^öX§z\∞äYiÆánqÍ.∂õ≠ùÏm"wûv∑ö≤â»i«"uÈÌjYrräby◊!∫y,ûã^≈ß-jwbû«´µÁg¢πöñ ZqÎ"û⁄j«∫‡≠â˚h¢W⁄ä[πËßΩ©bu∂¨{Æ~+lπ«y€∂f≤uÁ(uÏ"∂!ä◊¨•ßnÎHä{Æ◊ù¬∫'ÇÀõ≤⁄‚û>æœûµ∆ßv◊±∂jâ¯újÿ®û…ËµÏZr–®∫W\¢∫Ó¶”^yÿ¶ôÁbj◊• ó´Ö™lq©eÑ«PÑM9"98‘ƒ56üµÍË∫⁄n∂⁄/z∏ü»∑≠≥¢¥⁄∆ôbr+pj+m¢âHq©Ïzwg{m¢âhû\ö~◊´≠Î.ñ‘·zV¨µ´,äÀZûŸû≤∆†z⁄-¢âaj…Ë∂»h¬z.∂õ≠nÎfk&ﬁä{‚≤&Âx-π©e ⁄⁄û«+äõlÜå,j⁄
